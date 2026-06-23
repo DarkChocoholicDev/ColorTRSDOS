@@ -21,6 +21,7 @@
   <ItemGroup>
     <None Include="BootWrapper.asm" />
     <None Include="DOSCore.asm" />
+    <None Include="DOSCoreWrapper.asm" />
     <None Include="Makefile" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -68,10 +69,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <NMakeBuildCommandLine>nmake /f Makefile LWToolsPath="%LWToolsPath%"</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine>nmake /f Makefile LWToolsPath="%LWToolsPath%" Configuration=$(Configuration)</NMakeBuildCommandLine>
     <NMakeOutput>bin/DOSCore.bin</NMakeOutput>
-    <NMakeCleanCommandLine>nmake /f Makefile clean LWToolsPath="%LWToolsPath%"</NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>nmake /f Makefile clean all LWToolsPath="%LWToolsPath%"</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>nmake /f Makefile clean LWToolsPath="%LWToolsPath%" Configuration=$(Configuration)</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>nmake /f Makefile clean all LWToolsPath="%LWToolsPath%" Configuration=$(Configuration)</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

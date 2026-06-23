@@ -1598,8 +1598,6 @@ B12A   DOS    READ,RBA READ IN THE ROOT SEGMENT
 *
        FCB    0        PLACE WHERE NUMBER OF 1ST OVERLAY LOADED GOES
 
-    ; KJF: Skip the overlay section if we're doing a special "DOS Core" build.
-    IFNDEF SKIP_OVERLAY_SECTION
 *
 *** **********************************************************************
 *           O V E R L A Y   S E C T I O N   F O L L O W S
@@ -1710,6 +1708,9 @@ VECINI FDB    DOPEN    POINTER TO OPEN FUNCTION
        FCB     0,0,0,0,0,0,0,0
 *
 ENDVEC FCB     0        END OF PRESET DATA
+
+    ; KJF: Skip the overlay section if we're doing a special "DOS Core" build.
+    IFNDEF SKIP_OVERLAY_SECTION
 
 *
 **************************************************************************

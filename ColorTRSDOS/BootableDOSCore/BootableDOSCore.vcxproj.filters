@@ -22,5 +22,8 @@
     <None Include="DOSCore.asm">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="DOSCoreWrapper.asm">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

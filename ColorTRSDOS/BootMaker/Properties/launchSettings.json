@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BootMaker": {
+      "commandName": "Project",
+      "commandLineArgs": "\"$(SolutionDir)BootableDOSCore\\bin\\DOSBOOT.raw\" \"C:\\Users\\kfrec\\OneDrive\\Documents\\TRS-80\\Color Computer\\Diskettes\\TRSDOS-Boot.dsk\""
+    }
+  }
+}
